@@ -22,6 +22,10 @@
 
 package com.github.prominence.openweathermap.api.exception;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+@ResponseStatus(value = HttpStatus.NOT_FOUND, code = HttpStatus.NOT_FOUND, reason = "Data not found")
 public class DataNotFoundException extends Exception {
 
     public DataNotFoundException() {
